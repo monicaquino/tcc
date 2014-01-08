@@ -1,0 +1,45 @@
+<%= form_for(@cintura_quadril) do |f| %>
+  <% if @cintura_quadril.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cintura_quadril.errors.count, "error") %> prohibited this cintura_quadril from being saved:</h2>
+
+      <ul>
+      <% @cintura_quadril.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="form-container">
+<form class="form-horizontal">
+<fieldset>  
+  <div class="field">
+  <div class="control-group">
+  <label class="control-label" for="appendedtext">Cintura:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :cintura %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Quadril:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :quadril %>
+      <span class="add-on">cm</span>
+    </div>
+  </div>
+</div>
+<div class="actions">
+    <%= f.submit "Salvar"%>
+  </div>
+</fieldset>
+</form>
+<% end %>
+</div>

@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  meta: MyText
+  condicionamento: MyString
+  tipo_sanguineo: MyString
+  anemia: MyString
+  fumante: MyString
+  alergia: MyText
+  doenca: MyText
+  lesao: MyText
+  cirurgia: MyText
+  medicacao: MyText
+  emergencia: MyString
+  telefone: MyString
+  observacao: MyText
+  dieta: MyText
+  peso: 1.5
+  altura: 1.5
+  aluno_id: 
+
+two:
+  meta: MyText
+  condicionamento: MyString
+  tipo_sanguineo: MyString
+  anemia: MyString
+  fumante: MyString
+  alergia: MyText
+  doenca: MyText
+  lesao: MyText
+  cirurgia: MyText
+  medicacao: MyText
+  emergencia: MyString
+  telefone: MyString
+  observacao: MyText
+  dieta: MyText
+  peso: 1.5
+  altura: 1.5
+  aluno_id: 

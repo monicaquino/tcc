@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title> Avaliações </title>
+   <%= render 'layouts/stylesheets' %>
+   <%= csrf_meta_tag %>
+  </head>
+  <body>
+ 
+<%= render 'layouts/menu' %>
+<div id="wrapper">
+	<div id="featured" class="container">
+		<h2 class="title">Faça sua avaliação física</h2>
+		<div id="fbox1"> <img src="/assets/img04.jpg" width="235" height="235" alt="" />
+			<h2><%= link_to "Antropometria", new_antropo_path %></h2>
+			<h4>Antropometria apresenta informações valiosas para a estimação dos vários componentes corporais de: crianças em desenvolvimento, adultos sedentários ou atletas</h4>
+		</div>
+		<div id="fbox2"> <img src="/assets/img07.jpg" width="235" height="235" alt="" />
+			<h2><%= link_to 'IMC', new_calculo_imc_path %></h2>
+			<h4>Verifique se você está com o peso normal, acima ou abaixo do recomendado para a sua altura</h4>
+		</div>
+		<div id="fbox3"> <img src="/assets/img11.jpg" width="235" height="235" alt="" />
+			<h2><%= link_to 'Cintura x Quadril', new_cintura_quadril_path %></h2>
+			<h4>É um método de avaliação física utilizado  para calcular o risco de desenvolver doenças do coração e hipertensão arterial</h4>
+		</div>
+		
+	</div>
+	<div id="wrapper">
+	<div id="featured" class="container">
+		<div id="fbox4"> <img src="/assets/img05.jpg" width="235" height="235" alt="" />
+			<h2><%= link_to 'ANAMNESE', new_teste_anamnese_path %></h2>
+			<h4> Nesse momento que o avaliador começa a “saber mais” a respeito do avaliado para a realização dos testes e para a própria prescrição dos exercícios físicos</h4>
+		</div>
+		<div id="fbox5" margin left="150px"> <img src="/assets/img12.jpg" width="235" height="235" alt="" />
+			<h2> <%= link_to 'VO2 MÁXIMO',  new_vo2maximo_path %></h2>
+			<h4>VO2 Máx é uma medida para o "Condicionamento" e o limiar anaeróbio define o ponto onde a atividade física passa a ser mais desgastante</h4>
+		</div>
+		<div id="fbox6"> <img src="/assets/img10.jpg" width="235" height="235" alt="" />
+			<h2><%= link_to 'PERCENTUAL GORDURA', new_percentual_gordura_path%> </h2>
+			<h4>O seu percentual de gordura corporal é simplesmente a porcentagem de gordura que o seu corpo tem. O peso corporal total inclui os valores da gordura corporal e da massa magra</h4>
+		</div>
+	</div>
+</div>
+		
+
+<%= render 'layouts/footer' %>
+
+ </body>
+</html>

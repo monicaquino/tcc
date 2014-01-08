@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+<div class="sideesquerda"> 
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Meta:</strong>
+  <%= @teste_anamnese.meta %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Condicionamento:</strong>
+  <%= @teste_anamnese.condicionamento %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Tipo sanguineo:</strong>
+  <%= @teste_anamnese.tipo_sanguineo %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Anemia:</strong>
+  <%= @teste_anamnese.anemia %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Fumante:</strong>
+  <%= @teste_anamnese.fumante %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Alergia:</strong>
+  <%= @teste_anamnese.alergia %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Doenças:</strong>
+  <%= @teste_anamnese.doenca %>
+</label>
+
+</div>
+<div class="sidedireita"> 
+ <label class="control-label" for="textinput"></br>
+  <strong>Lesões:</strong>
+  <%= @teste_anamnese.lesao %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Cirurgias:</strong>
+  <%= @teste_anamnese.cirurgia %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Medicação:</strong>
+  <%= @teste_anamnese.medicacao %>
+</label>
+ <label class="control-label" for="textinput"></br>
+  <strong>Contato de Emergência:</strong>
+  <%= @teste_anamnese.emergencia %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+    <strong>Telefone:</strong>
+
+  <%= @teste_anamnese.telefone %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Observação:</strong>
+  <%= @teste_anamnese.observacao %>
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Dieta:</strong>
+  <%= @teste_anamnese.dieta %>
+</label>
+
+</div>
+
+
+<%= link_to 'Editar', edit_teste_anamnese_path(@teste_anamnese) %> |
+<%= link_to 'Voltar', teste_anamneses_path %>

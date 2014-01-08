@@ -1,0 +1,232 @@
+<%= form_for(@teste_anamnese) do |f| %>
+  <% if @teste_anamnese.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@teste_anamnese.errors.count, "error") %> prohibited this teste_anamnese from being saved:</h2>
+
+      <ul>
+      <% @teste_anamnese.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    
+ <form class="form-horizontal">
+<fieldset>
+  <style>
+    #coluna-1 { width:50%; float:left; }
+    #coluna-2 { width:50%; float:right; }
+    .clearfix { clear:both; }
+</style>
+
+<!-- Form Name -->
+<legend>Anamnese</legend>
+<div id="coluna-1">
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Metas com a prática da atividade física:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_area :meta %>
+    </div>
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="radios">Nível de condicionamento?</label>
+  <div class="controls">
+    <div class="input-append">
+    
+    <%= f.radio_button :condicionamento,  "Sedentário" %>
+    <%= f.label :condicionamento, "Sedentário"  %>
+   
+    <%= f.radio_button :condicionamento,  "Atleta" %> 
+    <%= f.label :condicionamento, "Atleta"%>
+  
+    <%= f.radio_button :condicionamento, "Ativo", :checked => true %>  
+    <%= f.label :condicionamento, "Ativo"%>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Tipo Sanguíneo</label>
+  <div class="controls">
+       <div class="input-append">
+    
+    <%= f.radio_button :tipo_sanguineo,  "A" %>
+    <%= f.label :tipo_sanguineo, "A"  %>
+   
+    <%= f.radio_button :tipo_sanguineo,  "B" %> 
+    <%= f.label :tipo_sanguineo, "B"%>
+  
+    <%= f.radio_button :tipo_sanguineo,  "O" %> 
+    <%= f.label :tipo_sanguineo, "O"%>
+
+    <%= f.radio_button :tipo_sanguineo, "AB", :checked => true %>  
+    <%= f.label :tipo_sanguineo, "AB"%>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Anemia:</label>
+    <div class="controls">
+       <div class="input-append">
+    
+    <%= f.radio_button :anemia,  "Sim" %>
+    <%= f.label :anemia, "Sim"  %>
+   
+    <%= f.radio_button :anemia,  "Não",  :checked => true %> 
+    <%= f.label :anemia, "Não"%>
+    </div>
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Fumante:</label>
+  <div class="controls">
+    <div class="input-append">
+   <%= f.radio_button :fumante,  "Sim" %>
+    <%= f.label :fumante, "Sim"  %>
+   
+    <%= f.radio_button :fumante,  "Não",  :checked => true %> 
+    <%= f.label :fumante, "Não"%>     
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Alergia:</label>
+  <div class="controls">
+    <div class="input-append">
+      <%= f.radio_button :alergia,  "Sim" %>
+    <%= f.label :alergia, "Sim"  %>
+   
+    <%= f.radio_button :alergia,  "Não",  :checked => true %> 
+    <%= f.label :alergia, "Não"%> 
+     <%= f.label :alergia, "Fator desencadeante:"%> 
+        <%= f.text_field :alergia %>
+    </div>
+     </div>
+</div>
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Alguma doença? Especifique.</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_area :doenca %>
+    </div>
+    
+  </div>
+</div>
+</div>
+<div id="coluna-2">
+<!-- Appended Input-->
+
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Lesões anteriores:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.radio_button :lesao,  "Muscular" %>
+    <%= f.label :lesao, "Muscular"  %>
+   
+    <%= f.radio_button :lesao,  "Articular" %> 
+    <%= f.label :lesao, "Articular"%>
+  
+    <%= f.radio_button :lesao,  "Óssea" %> 
+    <%= f.label :lesao, "Óssea"%>
+
+       </div>
+    
+  </div>
+</div>
+</div>
+<div id="coluna-1">
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext"> Cirurgias e Internações:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_area :cirurgia%>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Medicação em uso:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :medicacao %>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Em caso de emergência avisar:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :emergencia %>
+      <label class="control-label" for="appendedtext">Telefone</label>
+        <%= f.text_field :telefone %>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+
+</div>
+<div id="coluna-2">
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Observações:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_area :observacao %>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Dieta:</label>
+  <div class="controls">
+    <div class="input-append">
+  <%= f.radio_button :dieta,  "Sim" %>
+    <%= f.label :dieta, "Sim"  %>
+   
+    <%= f.radio_button :dieta,  "Não",  :checked => true %> 
+    <%= f.label :dieta, "Não"%>    </div>
+    
+  </div>
+</div>
+
+ 
+ <div class="actions">
+    <%= f.submit "Salvar" %>
+  </div>
+</fieldset>
+</form>
+<% end %>
+</style>
+</div>
+

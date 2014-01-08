@@ -1,0 +1,96 @@
+<%= form_for(@percentual_gordura) do |f| %>
+  <% if @percentual_gordura.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@percentual_gordura.errors.count, "error") %> prohibited this percentual_gordura from being saved:</h2>
+
+      <ul>
+      <% @percentual_gordura.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div id="form-container">
+<form class="form-horizontal">
+<fieldset>  
+  <div class="field">
+  <div class="control-group">
+  <label class="control-label" for="appendedtext">Tríceps:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :triceps %>
+      <span class="add-on">mm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Supra Escalar Feminina:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :supra_f %>
+      <span class="add-on">mm</span>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control-group">
+  <label class="control-label" for="appendedtext">Supra Escalar Masculina:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :supra_m %>
+      <span class="add-on">mm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Abdômen:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :abdomen %>
+      <span class="add-on">mm</span>
+    </div>
+  </div>
+</div>
+
+<div class="field">
+  <div class="control-group">
+  <label class="control-label" for="appendedtext">Coxa:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :coxa %>
+      <span class="add-on">mm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Subescapular:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :subescapular %>
+      <span class="add-on">mm</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="actions">
+    <%= f.submit "Salvar"%>
+  </div>
+</fieldset>
+</form>
+<% end %>
+</div>
+
+

@@ -1,0 +1,151 @@
+
+
+<script type="text/javascript" charset="utf-8">
+ 
+$(document).ready(function() {
+ 
+var chart = new Highcharts.Chart({
+ 
+chart: {
+renderTo: 'container'
+},
+plotOptions: {
+series: {
+pointWidth: 30
+}
+},
+title: {
+text: 'Medidas de Perimetro'
+},
+xAxis: {
+  title: {text:'Data das avaliações' },
+  categories: ['75','50','25']
+},
+
+yAxis: {
+title: { text: 'Centímetros (cm)' } },
+ series: [ { name: 'Pescoço', data: [125,100,75,50,25] }, { name: 'Cintura', data: [70,40,15,20,25] }, {name:'Ombro',  data: [60,40,15,70,25]}, {name: 'Tórax',  data: [40,45,15,40,25]}, {name: 'Abdômen',  data: [35,30,20,90,25]}, {name:'Quadril',  data: [65,40,15,80,25]}],
+});
+});
+</script>
+ 
+<div id="container" style="height: 300px;width:560px"></div>
+<p id="notice"><%= notice %></p>
+<div class="sideesquerda"> 
+  <label class="control-label" for="appendedtext">
+  <strong>Estatura:</strong>
+  <%= @antropo.estatura %>
+        <span class="add-on">cm</span>
+</label>
+
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Pescoço:</strong>
+  <%= @antropo.pescoco %>
+        <span class="add-on">cm</span>
+
+</label>
+
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Ombro:</strong>
+  <%= @antropo.ombro %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Tórax:</strong>
+  <%= @antropo.torax %>
+        <span class="add-on">cm</span>
+</label>
+
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Cintura:</strong>
+  <%= @antropo.cintura %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Abdômen:</strong>
+  <%= @antropo.abdomen %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Quadril:</strong>
+  <%= @antropo.quadril %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Braço Esquerdo:</strong>
+  <%= @antropo.braco_esq %>
+        <span class="add-on">cm</span>
+
+</label></div>
+
+<div class="sidedireita">
+
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Antebraço Esquerdo:</strong>
+  <%= @antropo.antebraco_esq %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Coxa Esquerda:</strong>
+  <%= @antropo.coxa_esq %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Panturrilha Esquerda:</strong>
+  <%= @antropo.panturrilha_esq %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Braço Direito:</strong>
+  <%= @antropo.braco_dir %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Antebraço Direito:</strong>
+  <%= @antropo.antebraco_dir %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Panturrilha Direita:</strong>
+  <%= @antropo.panturrilha_dir %>
+        <span class="add-on">cm</span>
+
+</label>
+  <label class="control-label" for="appendedtext"></br>
+
+  <strong>Coxa Direita:</strong>
+  <%= @antropo.coxa_dir %>
+        <span class="add-on">cm</span>
+
+</label>
+</br>
+<br>
+
+
+ </div>
+
+
+<%= link_to 'Editar', edit_antropo_path(@antropo) %> |
+<%= link_to 'Voltar', antropos_path %>

@@ -1,0 +1,80 @@
+   <h2>Índice de Massa Corporal (IMC) e Grau de Obesidade</h2>
+
+<div class="sideesquerda"> 
+
+<p id="notice"><%= notice %></p>
+<div id="content1">
+   <div id= "tabela">
+              <table class="table1">
+                <thead>
+                    <tr>
+                        <th scope="col" abbr="Starter">Grau de Obesidade</th>
+                        <th scope="col" abbr="Medium">Homem</th>
+                        <th scope="col" abbr="Business">Mulher</th>
+                    </tr>
+                </thead>
+              
+                <tbody>
+                    <tr>
+                        <th scope="row">Não-obeso</th>
+                        <td> IMC < 25 </td>
+                        <td>IMC < 27 </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Moderadamente Obeso</th>
+                        <td>IMC 25-30</td>
+                        <td>IMC 27-30</td>
+                      </tr>
+                    <tr>
+                        <th scope="row">Maciçamente Obeso</th>
+                        <td>IMC 30-49</td>
+                        <td>IMC 30-40</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Morbidamente Obeso</th>
+                        <td>IMC > 40</td>
+                        <td>IMC > 40</td>
+                        
+                    </tr>
+                 
+                </tbody>
+            </table>
+            </div>
+        </div>
+</div>
+
+<div class="sidedireita"> 
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong>Altura:</strong>
+  <%= @calculo_imc.altura %>
+        <span class="add-on">m</span>
+
+</h1>
+
+<h1>
+  <strong>Peso:</strong>
+  <%= @calculo_imc.peso %>
+        <span class="add-on">kg</span>
+
+</h1>
+
+<h1>
+<Strong> IMC:  </Strong>
+ <%= imc(@calculo_imc) %>
+</h1>
+</h1>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+  </div>
+<%= link_to 'Editar', edit_calculo_imc_path(@calculo_imc) %> |
+<%= link_to 'Voltar', calculo_imcs_path %>

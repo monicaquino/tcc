@@ -1,0 +1,29 @@
+<h1>VO2 MÁXIMO </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Distância percorrida</th>
+      <th>Aluno</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vo2maximos.each do |vo2maximo| %>
+      <tr>
+        <td><%= vo2maximo.distancia %></td>
+        <td><%= vo2maximo.aluno %></td>
+        <td><%= link_to 'Mostrar', vo2maximo %></td>
+        <td><%= link_to 'Editar', edit_vo2maximo_path(vo2maximo) %></td>
+        <td><%= link_to 'Deletar', vo2maximo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo VOmáximo', new_vo2maximo_path %>

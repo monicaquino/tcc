@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title> Home </title>
+</head>
+<body> 
+<% unless user_signed_in? %>
+<div>
+		<h1>Bem vindo ao Superforma!</h1>
+		<p>
+			<%= link_to "Entrar", new_user_registration_path %>
+		</p>
+	</div>
+	<%= render 'layouts/yield' %>
+<% end %>

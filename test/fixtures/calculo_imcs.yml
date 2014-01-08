@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  altura: 1.5
+  peso: 1.5
+  aluno_id: 
+
+two:
+  altura: 1.5
+  peso: 1.5
+  aluno_id: 

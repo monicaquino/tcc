@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cintura: 1.5
+  quadril: 1.5
+  aluno_id: 
+
+two:
+  cintura: 1.5
+  quadril: 1.5
+  aluno_id: 

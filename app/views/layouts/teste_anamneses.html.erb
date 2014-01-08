@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title> Anamnese </title>
+   <%= render 'layouts/stylesheets' %>
+   <%= csrf_meta_tag %>
+  </head>
+  <body>
+ 
+<%= render 'layouts/menu' %>
+<header class>
+                <div class="menu-row">
+                    <div class="container_24">
+                        <div class="grid_24 index-2">
+                            <nav class="fleft">
+                                <ul class="menu2">
+                                    <li><%= link_to   "Voltar",  avaliacaos_path %></li>
+                                    <li> <%= link_to 'Nova Anamnese', new_teste_anamnese_path  %></li>
+                                      </ul>
+                            </nav>
+                         </div>
+                     </div>
+                  </div>
+                        
+  </header>
+<div class="teste">
+   <%= yield %>   
+</div>
+
+<%= render 'layouts/footer' %>
+
+ </body>
+</html>

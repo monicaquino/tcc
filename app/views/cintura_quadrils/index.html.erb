@@ -1,0 +1,30 @@
+<h1>Índide de Relação Cintura x Quadril </h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cintura</th>
+      <th>Quadril</th>
+      <th>Aluno</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cintura_quadrils.each do |cintura_quadril| %>
+      <tr>
+        <td><%= cintura_quadril.cintura %></td>
+        <td><%= cintura_quadril.quadril %></td>
+        <td><%= cintura_quadril.aluno %></td>
+        <td><%= link_to 'Mostar', cintura_quadril %></td>
+        <td><%= link_to 'Editar', edit_cintura_quadril_path(cintura_quadril) %></td>
+        <td><%= link_to 'Excluir', cintura_quadril, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= link_to 'Novo IRAQ', new_cintura_quadril_path %>

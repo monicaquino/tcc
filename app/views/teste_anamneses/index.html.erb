@@ -1,0 +1,59 @@
+<h1>Anamnese</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Meta</th>
+      <th>Condicionamento</th>
+      <th>Tipo sanguineo</th>
+      <th>Anemia</th>
+      <th>Fumante</th>
+      <th>Alergia</th>
+      <th>Doenca</th>
+      <th>Lesao</th>
+      <th>Cirurgia</th>
+      <th>Medicacao</th>
+      <th>Emergencia</th>
+      <th>Telefone</th>
+      <th>Observacao</th>
+      <th>Dieta</th>
+      <th>Peso</th>
+      <th>Altura</th>
+      <th>Aluno</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @teste_anamneses.each do |teste_anamnese| %>
+      <tr>
+        <td><%= teste_anamnese.meta %></td>
+        <td><%= teste_anamnese.condicionamento %></td>
+        <td><%= teste_anamnese.tipo_sanguineo %></td>
+        <td><%= teste_anamnese.anemia %></td>
+        <td><%= teste_anamnese.fumante %></td>
+        <td><%= teste_anamnese.alergia %></td>
+        <td><%= teste_anamnese.doenca %></td>
+        <td><%= teste_anamnese.lesao %></td>
+        <td><%= teste_anamnese.cirurgia %></td>
+        <td><%= teste_anamnese.medicacao %></td>
+        <td><%= teste_anamnese.emergencia %></td>
+        <td><%= teste_anamnese.telefone %></td>
+        <td><%= teste_anamnese.observacao %></td>
+        <td><%= teste_anamnese.dieta %></td>
+        <td><%= teste_anamnese.peso %></td>
+        <td><%= teste_anamnese.altura %></td>
+        <td><%= teste_anamnese.aluno_id %></td>
+        <td><%= link_to 'Mostrar', teste_anamnese %></td>
+        <td><%= link_to 'Editar', edit_teste_anamnese_path(teste_anamnese) %></td>
+        <td><%= link_to 'Excluir', teste_anamnese, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Anamnese', new_teste_anamnese_path %>

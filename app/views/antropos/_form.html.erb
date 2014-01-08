@@ -1,0 +1,231 @@
+<%= form_for( @antropo) do |f| %>
+  <% if @antropo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@antropo.errors.count, "error") %> prohibited this antropo from being saved:</h2>
+
+      <ul>
+      <% @antropo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="form-container">
+
+<form class="form-horizontal">
+<fieldset>
+  <style>
+    #coluna-1 { width:50%; float:left; }
+    #coluna-2 { width:50%; float:right; }
+    .clearfix { clear:both; }
+</style>
+
+<!-- Form Name -->
+<div id="coluna-1">
+
+<!-- Appended Input-->
+
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Estatura:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :estatura %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Pescoço:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :pescoco %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Ombro:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :ombro %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+</div>
+<div id="coluna-2">
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Tórax:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :torax %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Cintura:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :cintura %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Abdômen:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :abdomen %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Quadril:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :quadril %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+</div>
+<div id="coluna-1">
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Braço direito:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :braco_dir%>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Coxa direita:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :coxa_dir %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Panturrilha direita:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :panturrilha_dir %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Antebraço direito:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :antebraco_dir %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+</div>
+
+<div id="coluna-2">
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Braço esquerdo:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :braco_esq %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Coxa esquerda:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :coxa_esq %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Panturrilha esquerda:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :panturrilha_esq %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Antebraço esquerdo:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :antebraco_esq %>
+      <span class="add-on">cm</span>
+    </div>
+    
+  </div>
+</div>
+<div class="field">
+    <%= f.label :aluno %><br>
+    <%= f.text_field :aluno_id  %>
+      <%= f.hidden_field :aluno_id %>
+
+  
+</div>
+</div>
+
+  <div class="actions">
+    <%= f.submit "Salvar"%>
+  </div>
+</fieldset>
+</form>
+<% end %>
+</div>

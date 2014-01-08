@@ -1,0 +1,27 @@
+<div id="carbonForm">
+
+<h1>Login</h1>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :email %><br />
+  <%= f.text_field :email, :autofocus => true %></div>
+
+  <div><label>Senha</label><br />
+  <%= f.password_field :password %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <label>Lembrar</label> </div>
+  <% end -%>
+  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %><br />
+<% end -%>
+<div class="signupButton">
+        <input type="submit" name="submit" id="submit" value="entrar" />
+
+    </div>
+<% end %>
+</div>
+<div class="links">
+ <%= render "devise/shared/links" %>
+ </div>
+

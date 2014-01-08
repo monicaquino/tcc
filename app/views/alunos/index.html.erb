@@ -1,0 +1,35 @@
+
+<h1>Seus alunos <%= current_user.username%></h1>
+  <div class="table-responsive">
+  
+ <table class="table">
+ <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Sexo</th>
+        <th> Data</th>
+        <th> Telefone </th>
+        <th> Estado </th>
+        <th> Cidade </th>
+      </thead>
+<tbody>
+      <% @alunos.each do |aluno| %>
+       <tr>
+        <td><%= link_to aluno.nome, avaliacaos_path %></td>
+        <td><%= aluno.sobrenome %></td>
+        <td><%= aluno.sexo %></td>
+        <td><%= aluno.data_nas %></td>
+        <td><%= aluno.telefone %></td>
+        <td><%= aluno.estado %></td>
+        <td><%= aluno.cidade %></td>
+        <td><%= link_to 'Mostrar', aluno %></td>
+        <td><%= link_to 'Editar', edit_aluno_path(aluno) %></td>
+        <td><%= link_to 'Excluir', aluno, method: :delete, data: { confirm: 'tem certeza que quer excluir' } %></td>
+         <% end %>
+         </tbody>  
+ </table>
+ </div>
+<br>
+    
+

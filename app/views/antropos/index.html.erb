@@ -1,0 +1,57 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>Estatura</th>
+      <th>Pescoço</th>
+      <th>Ombro</th>
+      <th>Tórax</th>
+      <th>Cintura</th>
+      <th>Abdômen</th>
+      <th>Quadril</th>
+      <th>Braço Esquerdo</th>
+      <th>Antebraço Esquerdo</th>
+      <th>Coxa Esquerda</th>
+      <th>Panturrilha Esquerda</th>
+      <th>Braço Direito</th>
+      <th>Antebraço Direito</th>
+      <th>Panturrilha Direita</th>
+      <th>Coxa Direita</th>
+      <th>Aluno</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @antropos.each do |antropo| %>
+      <tr>
+        <td><%= antropo.estatura %></td>
+        <td><%= antropo.pescoco %></td>
+        <td><%= antropo.ombro %></td>
+        <td><%= antropo.torax %></td>
+        <td><%= antropo.cintura %></td>
+        <td><%= antropo.abdomen %></td>
+        <td><%= antropo.quadril %></td>
+        <td><%= antropo.braco_esq %></td>
+        <td><%= antropo.antebraco_esq %></td>
+        <td><%= antropo.coxa_esq %></td>
+        <td><%= antropo.panturrilha_esq %></td>
+        <td><%= antropo.braco_dir %></td>
+        <td><%= antropo.antebraco_dir %></td>
+        <td><%= antropo.panturrilha_dir %></td>
+        <td><%= antropo.coxa_dir %></td>
+        <td><%= antropo.aluno_id %></td>
+        <td><%= link_to 'Mostrar', antropo %></td>
+        <td><%= link_to 'Editar', edit_antropo_path(@antropo) %></td>
+        <td><%= link_to 'Excluir', antropo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+   
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Antropometria', new_antropo_path %>

@@ -1,0 +1,38 @@
+  <div id="banner">
+	<div id="slider">
+		<div class="viewer">
+			<div class="reel">
+				<div class="slide">
+					<h2>Crie uma Conta </h2>
+					<a class="link" href="http://nodethirtythree.com/#slidertron-slide-1">Full story ...</a> <img src="/assets/dieta.jpg" alt="" /> </div>
+				<div class="slide">
+					<h2>Faça o login no Sistema</h2>
+					<a class="link" href="http://nodethirtythree.com/#slidertron-slide-2">Full story ...</a> <img src="/assets/img02.jpg" alt="" /> </div>
+				<div class="slide">
+					<h2>Compare sua Performance</h2>
+					<a class="link" href="http://nodethirtythree.com/#slidertron-slide-3">Full story ...</a> <img src="/assets/img03.jpg" alt="" /> </div>
+			</div>
+		</div>
+		<div class="indicator">
+			<ul>
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$('#slider').slidertron({
+			viewerSelector: '.viewer',
+			reelSelector: '.viewer .reel',
+			slidesSelector: '.viewer .reel .slide',
+			advanceDelay: 3000,
+			speed: 'slow',
+			navPreviousSelector: '.previous-button',
+			navNextSelector: '.next-button',
+			indicatorSelector: '.indicator ul li',
+			slideLinkSelector: '.link'
+		});
+	</script> 
+</div>

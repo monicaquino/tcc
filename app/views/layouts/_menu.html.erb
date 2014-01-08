@@ -1,0 +1,29 @@
+  <div class="container_11">
+   <div class="grid_11">
+  <div id="menu" class="container">
+		<ul>
+			<li class="current_page_item"><%= link_to "Home",  root_path %></li>
+			<li><a href="#">Serviços</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Fotos</a></li>
+			<li><a href="#"><%=link_to "Registrar", new_user_registration_path %></a></li>
+			<li><% if current_user %>
+  <%= link_to "Logout", destroy_user_session_path %>
+<% else %>
+    <%= link_to "Login", new_user_session_path %>
+<% end %></li>
+			<li><a href="#">Contato</a></li>
+		</ul>
+	</div>  
+
+	<div id="header-wrapper">
+	 <div id="header" class="container">
+			<div id="logo">
+			<h1><a href="#">superforma</a></h1>
+	        </div> 		
+	</div> 
+</div>
+</div>
+</div>
+
+

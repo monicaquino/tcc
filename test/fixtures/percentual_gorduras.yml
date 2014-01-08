@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  triceps: 1.5
+  supra_f: 1.5
+  supra_m: 1.5
+  abdomen: 1.5
+  coxa: 1.5
+  subescapular: 1.5
+  aluno_id: 
+
+two:
+  triceps: 1.5
+  supra_f: 1.5
+  supra_m: 1.5
+  abdomen: 1.5
+  coxa: 1.5
+  subescapular: 1.5
+  aluno_id: 

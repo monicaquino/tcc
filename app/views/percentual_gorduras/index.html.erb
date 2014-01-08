@@ -1,0 +1,39 @@
+<h1>Percentual de Gordura</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Triceps</th>
+      <th>Supra f</th>
+      <th>Supra m</th>
+      <th>Abdomen</th>
+      <th>Coxa</th>
+      <th>Subescapular</th>
+      <th>Aluno</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @percentual_gorduras.each do |percentual_gordura| %>
+      <tr>
+        <td><%= percentual_gordura.triceps %></td>
+        <td><%= percentual_gordura.supra_f %></td>
+        <td><%= percentual_gordura.supra_m %></td>
+        <td><%= percentual_gordura.abdomen %></td>
+        <td><%= percentual_gordura.coxa %></td>
+        <td><%= percentual_gordura.subescapular %></td>
+        <td><%= percentual_gordura.aluno %></td>
+        <td><%= link_to 'Mostrar', percentual_gordura %></td>
+        <td><%= link_to 'Editar', edit_percentual_gordura_path(percentual_gordura) %></td>
+        <td><%= link_to 'Excluir', percentual_gordura, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Percentual', new_percentual_gordura_path %>

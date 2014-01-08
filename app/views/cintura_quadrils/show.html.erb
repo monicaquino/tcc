@@ -1,0 +1,96 @@
+       <h2>Índice de Relação Cintura x Quadril (IRAQ) </h2>
+
+<p id="notice"><%= notice %></p>
+<div class="sideesquerda"> 
+<div id="content1">
+           
+            <table class="table1">
+                <thead>
+                    <tr>
+                        <th scope="col" abbr="Starter">Idade</th>
+                        <th scope="col" abbr="Medium">Baixo</th>
+                        <th scope="col" abbr="Business">Moderado</th>
+                        <th scope="col" abbr="Deluxe">Alto</th>
+                        <th scope="col" abbr="Deluxe">Muito Alto</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">20-29</th>
+                        <td> <0,83</td>
+                        <td>0,83-0,88</td>
+                        <td>0,89-0,94</td>
+                        <td> >0,94</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">30-39</th>
+                           <td><0,84</td>
+                        <td>0,84-0,91</td>
+                        <td>0,92-0,96</td>
+                        <td>>0,96</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">40-49</th>
+                          <td><0,88</td>
+                        <td>0,88-0,95</td>
+                        <td>0,96-1,00</td>
+                        <td>>1,00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">50-59</th>
+                           <td><0,90</td>
+                        <td>0,90-0,96</td>
+                        <td>0,97-1,02</td>
+                        <td>>1,02</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">60-69</th>
+                         <td><0,91</td>
+                        <td>0,91-0,98</td>
+                        <td>0,99-1,03</td>
+                        <td>>1,03</td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+            </div>
+
+</div>
+<div class="sidedireita"> 
+
+<h1>
+  <strong>Cintura:</strong>
+  <%= @cintura_quadril.cintura %>
+        <span class="add-on">cm</span>
+
+</h1>
+
+<h1>
+  <strong>Quadril:</strong>
+  <%= @cintura_quadril.quadril %>
+        <span class="add-on">cm</span>
+
+</h1>
+
+
+<h1>
+<strong> IRAQ: </strong>
+<%= relacao(@cintura_quadril) %>
+</h1>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+
+
+        </div>
+
+<%= link_to 'Editar', edit_cintura_quadril_path(@cintura_quadril) %> |
+<%= link_to 'Voltar', cintura_quadrils_path %>

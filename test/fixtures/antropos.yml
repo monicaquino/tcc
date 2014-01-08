@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  estatura: 1.5
+  pescoco: 1.5
+  ombro: 1.5
+  torax: 1.5
+  cintura: 1.5
+  abdomen: 1.5
+  quadril: 1.5
+  braco_esq: 1.5
+  antebraco_esq: 1.5
+  coxa_esq: 1.5
+  panturrilha_esq: 1.5
+  braco_dir: 1.5
+  antebraco_dir: 1.5
+  panturrilha_dir: 1.5
+  coxa_dir: 1.5
+  aluno_id: 
+
+two:
+  estatura: 1.5
+  pescoco: 1.5
+  ombro: 1.5
+  torax: 1.5
+  cintura: 1.5
+  abdomen: 1.5
+  quadril: 1.5
+  braco_esq: 1.5
+  antebraco_esq: 1.5
+  coxa_esq: 1.5
+  panturrilha_esq: 1.5
+  braco_dir: 1.5
+  antebraco_dir: 1.5
+  panturrilha_dir: 1.5
+  coxa_dir: 1.5
+  aluno_id: 

@@ -1,0 +1,32 @@
+<h2>VO2 MÁXIMO - Teste de Corrida e/ou caminhada de 12 minutos (Cooper)</h2>
+
+<div id="wrapper">
+	<div id="featured" class="container">
+		<div id="fbox5"> <img src="/assets/img12.jpg" width="235" height="235" alt="" />
+			
+		</div>
+		<h1> O avaliado deverá correr ou andar por 12 minutos em terreno plano com uma velocidade constante durante todo o teste, buscando percorrer a maior distância possível que deverá ser registrada.</h1>
+	</div>
+</div>
+<p id="notice"><%= notice %></p>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Distância Percorrida:</strong>
+  <%= @vo2maximo.distancia %>
+            <span class="add-on"> m</span>
+
+</label>
+
+ <label class="control-label" for="textinput"></br>
+  <strong>Cálculo do VO2:</strong>
+  <%= vo2(@vo2maximo) %>
+
+          <span class="add-on">  ml.kg.-1min.-1</span>
+
+</label>
+</br>
+<br>
+</br>
+<br>
+<%= link_to 'Editar', edit_vo2maximo_path(@vo2maximo) %> |
+<%= link_to 'Voltar', vo2maximos_path %>

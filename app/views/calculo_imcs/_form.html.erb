@@ -1,0 +1,47 @@
+<%= form_for(@calculo_imc) do |f| %>
+  <% if @calculo_imc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calculo_imc.errors.count, "error") %> prohibited this calculo_imc from being saved:</h2>
+
+      <ul>
+      <% @calculo_imc.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div id="form-container">
+<form class="form-horizontal">
+<fieldset>  
+  <div class="field">
+  <div class="control-group">
+  <label class="control-label" for="appendedtext">Altura:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :altura %>
+      <span class="add-on">m</span>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="control-group">
+  <label class="control-label" for="appendedtext">Peso:</label>
+  <div class="controls">
+    <div class="input-append">
+    <%= f.text_field :peso %>
+      <span class="add-on">kg</span>
+    </div>
+  </div>
+</div>
+<div class="actions">
+    <%= f.submit "Salvar"%>
+  </div>
+</fieldset>
+</form>
+<% end %>
+</div>
+
+  
+  

@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Triceps:</strong>
+  <%= @percentual_gordura.triceps %>
+        <span class="add-on">mm</span>
+
+</p>
+
+<p>
+  <strong>Supra f:</strong>
+  <%= @percentual_gordura.supra_f %>
+        <span class="add-on">mm</span>
+
+</p>
+
+<p>
+  <strong>Supra m:</strong>
+  <%= @percentual_gordura.supra_m %>
+        <span class="add-on">mm</span>
+
+</p>
+
+<p>
+  <strong>Abdomen:</strong>
+  <%= @percentual_gordura.abdomen %>
+        <span class="add-on">mm</span>
+
+</p>
+
+<p>
+  <strong>Coxa:</strong>
+  <%= @percentual_gordura.coxa %>
+        <span class="add-on">mm</span>
+
+</p>
+
+<p>
+  <strong>Subescapular:</strong>
+  <%= @percentual_gordura.subescapular %>
+        <span class="add-on">mm</span>
+
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @percentual_gordura.aluno %>
+</p>
+<p> 
+<Strong> Densidade Masculina </Strong>
+ <%= densidade_m(@percentual_gordura) %>
+</p>
+<p> 
+<Strong> Densidade Feminina </Strong>
+ <%= densidade_f(@percentual_gordura) %>
+</p>
+<Strong> Gordura </Strong>
+ <%=  %>
+</p>
+<%= link_to 'Editar', edit_percentual_gordura_path(@percentual_gordura) %> |
+<%= link_to 'Voltar', percentual_gorduras_path %>

@@ -1,0 +1,32 @@
+
+<h1>Índice de Massa Corporal</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Altura</th>
+      <th>Peso</th>
+      <th>Aluno</th> 
+    
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calculo_imcs.each do |calculo_imc| %>
+      <tr>
+        <td><%= calculo_imc.altura %></td>
+        <td><%= calculo_imc.peso %></td>
+        <td><%= calculo_imc.aluno %></td>
+        <td><%= link_to 'Mostrar', calculo_imc %></td>
+        <td><%= link_to 'Editar', edit_calculo_imc_path(calculo_imc) %></td>
+        <td><%= link_to 'Excluir', calculo_imc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<%= link_to 'Novo Cálculo IMC', new_calculo_imc_path %>
